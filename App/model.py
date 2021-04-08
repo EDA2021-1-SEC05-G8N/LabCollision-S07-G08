@@ -82,37 +82,37 @@ def newCatalog():
     Este indice crea un map cuya llave es el identificador del libro
     """
     catalog['bookIds'] = mp.newMap(10000,
-                                   maptype='CHAINING',
-                                   loadfactor=4.0,
+                                   maptype='PROBING',
+                                   loadfactor=0.80,
                                    comparefunction=compareMapBookIds)
 
     """
     Este indice crea un map cuya llave es el autor del libro
     """
     catalog['authors'] = mp.newMap(800,
-                                   maptype='CHAINING',
-                                   loadfactor=4.0,
+                                   maptype='PROBING',
+                                   loadfactor=0.80,
                                    comparefunction=compareAuthorsByName)
     """
     Este indice crea un map cuya llave es la etiqueta
     """
     catalog['tags'] = mp.newMap(34500,
                                 maptype='PROBING',
-                                loadfactor=0.5,
+                                loadfactor=0.80,
                                 comparefunction=compareTagNames)
     """
     Este indice crea un map cuya llave es el Id de la etiqueta
     """
     catalog['tagIds'] = mp.newMap(34500,
-                                  maptype='CHAINING',
-                                  loadfactor=4.0,
+                                  maptype='PROBING',
+                                  loadfactor=0.80,
                                   comparefunction=compareTagIds)
     """
     Este indice crea un map cuya llave es el año de publicacion
     """
     catalog['years'] = mp.newMap(40,
                                  maptype='PROBING',
-                                 loadfactor=0.5,
+                                 loadfactor=0.80,
                                  comparefunction=compareMapYear)
 
     return catalog
