@@ -1,5 +1,9 @@
 #ISIS1225 - Estructura de un proyecto
 
+Integrantes Grupo 8:
+Juan Sebastian Hoyos, 201822167, js.hoyosm@uniandes.edu.co
+Johan Stivens Ardila Tapiero	201911400
+
 Este proyecto busca mostrar una posible forma de organizar el código que se va a desarrollar en los proyectos del curso.
 
 Esta organización es una sugerencia que puede ser adaptada a  las necesidades y gustos de cada persona.
